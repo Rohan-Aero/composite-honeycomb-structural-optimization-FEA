@@ -39,27 +39,27 @@ Only face sheet thickness varies:
 
 - *Core Material:* PLA  
 - *Face Sheets:* Carbon Fiber Reinforced  
-- *Boundary Conditions:* Fixed support + applied load  
-- *Mesh Strategy:* Refined mesh for improved accuracy  
+- *Boundary Conditions:* Bottom face fully fixed; 1000 N applied as uniform pressure (≈0.144 MPa) over the top face, i.e. a flatwise compression setup  
+- *Mesh Strategy:* Quad-dominant solid mesh (SOLID186), 2,093 solid elements / 14,009 nodes, identical for all three cases; no convergence study yet  
 
 ---
 
 ## Results
-- Achieved ~21% reduction in total deformation  
-- Identified optimal thickness of *1.6 mm*  
-- Improved stiffness-to-weight ratio significantly  
+- ~21% reduction in **peak** total deformation from 0.85 mm to 1.6 mm (the peak occurs at the unsupported overhanging edge of the top face sheet); average deformation drops only ~2%  
+- *1.6 mm* gave the lowest deformation and stress of the three cases tested, at ~29% more mass than 0.85 mm  
+- Stiffness-to-weight ratio did not improve significantly: based on peak deformation, 1.2 mm is ~3% better than 0.85 mm and 1.6 mm is ~2% worse  
 
 ---
 
 ## Detailed Results
 
-| Thickness | Deformation (mm) | Von Mises Stress (MPa) | Elastic Strain |
-|-----------|-----------------|------------------------|----------------|
-| 0.85 mm   | 0.00701         | 2.9896                 | 0.000896       |
-| 1.2 mm    | 0.00601         | 2.9189                 | 0.000876       |
-| 1.6 mm    | 0.00556         | 2.8536                 | 0.000857       |
+| Thickness | Max Deformation (mm) | Avg Deformation (mm) | Von Mises Stress (MPa) | Elastic Strain | Mass (g) |
+|-----------|----------------------|----------------------|------------------------|----------------|----------|
+| 0.85 mm   | 0.00701              | 0.00214              | 2.9896                 | 0.000896       | 41.0     |
+| 1.2 mm    | 0.00601              | 0.00211              | 2.9189                 | 0.000876       | 46.6     |
+| 1.6 mm    | 0.00556              | 0.00210              | 2.8536                 | 0.000857       | 53.0     |
 
-**~21% reduction in deformation from 0.85mm to 1.6mm**
+**~21% reduction in peak deformation from 0.85mm to 1.6mm (~2% in average deformation)**
 
 ---
 
