@@ -1,0 +1,3 @@
+rev_label,basis,supersedes,config_code,thickness_mm,ecr_code,ecr_status,case_code,project_saved_utc,deformation_mm,stress_mpa
+A,demonstration,,T085,0.85,,,SIM-T085,2025-04-29T12:52:48Z,0.0070107,2.9896
+B,demonstration,A,T160,1.6,DEMO-ECR-0001,VERIFIED,SIM-T160,2025-04-29T13:31:57Z,0.0055584,2.8536

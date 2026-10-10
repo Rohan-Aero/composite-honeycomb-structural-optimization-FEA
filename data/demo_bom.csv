@@ -1,0 +1,10 @@
+config_code,parent_part_number,part_number,part_name,part_type,quantity,find_no,material,thickness_mm
+T085,,DEMO-HSP-1000,Honeycomb sandwich panel assembly,assembly,1,,,
+T085,DEMO-HSP-1000,DEMO-HSP-2000,Hexagonal honeycomb core,component,1,10,PLA,
+T085,DEMO-HSP-1000,DEMO-HSP-3085,Face sheet 0.85 mm,component,2,20,ePA-CF,0.85
+T120,,DEMO-HSP-1000,Honeycomb sandwich panel assembly,assembly,1,,,
+T120,DEMO-HSP-1000,DEMO-HSP-2000,Hexagonal honeycomb core,component,1,10,PLA,
+T120,DEMO-HSP-1000,DEMO-HSP-3120,Face sheet 1.2 mm,component,2,20,ePA-CF,1.2
+T160,,DEMO-HSP-1000,Honeycomb sandwich panel assembly,assembly,1,,,
+T160,DEMO-HSP-1000,DEMO-HSP-2000,Hexagonal honeycomb core,component,1,10,PLA,
+T160,DEMO-HSP-1000,DEMO-HSP-3160,Face sheet 1.6 mm,component,2,20,ePA-CF,1.6

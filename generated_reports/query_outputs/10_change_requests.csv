@@ -1,0 +1,7 @@
+ecr_code,status,basis,title,role,item_type,item,note,deformation_mm,stress_mpa
+DEMO-ECR-0001,VERIFIED,demonstration,Increase face-sheet thickness from 0.85 mm to 1.6 mm,affected,configuration,T085,baseline configuration,,
+DEMO-ECR-0001,VERIFIED,demonstration,Increase face-sheet thickness from 0.85 mm to 1.6 mm,affected,part,DEMO-HSP-3085,face sheet being replaced,,
+DEMO-ECR-0001,VERIFIED,demonstration,Increase face-sheet thickness from 0.85 mm to 1.6 mm,proposed,configuration,T160,proposed configuration,,
+DEMO-ECR-0001,VERIFIED,demonstration,Increase face-sheet thickness from 0.85 mm to 1.6 mm,proposed,part,DEMO-HSP-3160,thicker face sheet,,
+DEMO-ECR-0001,VERIFIED,demonstration,Increase face-sheet thickness from 0.85 mm to 1.6 mm,verification,simulation_case,SIM-T085,baseline result for comparison,0.0070107,2.9896
+DEMO-ECR-0001,VERIFIED,demonstration,Increase face-sheet thickness from 0.85 mm to 1.6 mm,verification,simulation_case,SIM-T160,result of the proposed configuration,0.0055584,2.8536
