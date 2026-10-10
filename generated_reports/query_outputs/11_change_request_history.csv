@@ -1,0 +1,6 @@
+ecr_code,seq,from_status,to_status,note
+DEMO-ECR-0001,1,(created),DRAFT,created
+DEMO-ECR-0001,2,DRAFT,SUBMITTED,demonstration step
+DEMO-ECR-0001,3,SUBMITTED,UNDER_REVIEW,demonstration step (no real reviewer)
+DEMO-ECR-0001,4,UNDER_REVIEW,IMPLEMENTED,revision B created
+DEMO-ECR-0001,5,IMPLEMENTED,VERIFIED,verification evidence linked: SIM-T085 and SIM-T160 core results exist (see engineering report for the derived comparison)

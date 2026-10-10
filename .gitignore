@@ -1,0 +1,4 @@
+# generated database and bytecode (reports in generated_reports/ are committed samples)
+build/
+__pycache__/
+*.pyc

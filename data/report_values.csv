@@ -1,0 +1,24 @@
+record_type,subject,quantity,value,printed_value,printed_unit,component,pdf_page,locator,note
+result,0.85,total_deformation,0.0070107,0.0070107,mm,assembly,61,Table 6 row 0.85,
+result,0.85,equivalent_elastic_strain,0.00089581,0.00089581,mm,assembly,61,Table 6 row 0.85,Column header prints (mm) although strain is dimensionless
+result,0.85,equivalent_stress,2989600,2.9896 × 10⁶,Pa,assembly,61,Table 6 row 0.85,
+result,1.2,total_deformation,0.006009,0.006009,mm,assembly,61,Table 6 row 1.2,
+result,1.2,equivalent_elastic_strain,0.00087613,0.00087613,mm,assembly,61,Table 6 row 1.2,Column header prints (mm) although strain is dimensionless
+result,1.2,equivalent_stress,2918900,2.9189 × 10⁶,Pa,assembly,61,Table 6 row 1.2,
+result,1.6,total_deformation,0.0055584,0.0055584,mm,assembly,61,Table 6 row 1.6,
+result,1.6,equivalent_elastic_strain,0.00085723,0.00085723,mm,assembly,61,Table 6 row 1.6,Column header prints (mm) although strain is dimensionless
+result,1.6,equivalent_stress,2853600,2.8536 × 10⁶,Pa,assembly,61,Table 6 row 1.6,
+input,0.85,applied_force,1000,1000 N,N,assembly,46,Figure 11 caption (1000 N downward force on the upper face; bottom face fixed),Section 5.5 states all three cases use the same loading and boundary conditions
+material_property,PLA,density,1.23,1.23,g/cm³,,37,Table 4 row Density (g/cm³),
+material_property,PLA,tensile_strength,63,63,MPa,,37,Table 4 row Tensile Strength (MPa),
+material_property,PLA,flexural_strength,74,74,MPa,,37,Table 4 row Flexural Strength (MPa),
+material_property,PLA,flexural_modulus,1973,1973,MPa,,37,Table 4 row Flexural Modulus (MPa),
+material_property,PLA,shear_modulus,2.4,2.4,GPa,,37,Table 4 row Shear Modulus (GPa),Not given for ePA-CF (printed as a dash)
+material_property,PLA,izod_impact_strength,9,9,kJ/m²,,37,Table 4 row IZOD Impact Strength (kJ/m²),
+material_property,ePA-CF,density,1.24,1.24,g/cm³,,37,Table 4 row Density (g/cm³),
+material_property,ePA-CF,tensile_strength,140,140,MPa,,37,Table 4 row Tensile Strength (MPa),
+material_property,ePA-CF,flexural_strength,140,140,MPa,,37,Table 4 row Flexural Strength (MPa),
+material_property,ePA-CF,flexural_modulus,5160,5160,MPa,,37,Table 4 row Flexural Modulus (MPa),
+material_property,ePA-CF,izod_impact_strength,18.67,18.67,kJ/m²,,37,Table 4 row IZOD Impact Strength (kJ/m²),
+label,ALL,core_material_label,,PLA -CF,,,46,Table 5 column Core Material (rows Exp 1-3),README and the solver deck have a PLA core
+label,ALL,face_sheet_material_label,,PLA,,,46,Table 5 column Face Sheet Material (rows Exp 1-3),README and the solver deck have ePA-CF face sheets

@@ -1,0 +1,19 @@
+record,item,availability,value,unit,reason
+SIM-T085,equivalent_elastic_strain,available,0.00089581,1,
+SIM-T085,equivalent_stress,available,2.9896,MPa,
+SIM-T085,total_deformation,available,0.0070107,mm,
+SIM-T120,equivalent_elastic_strain,available,0.00087613,1,
+SIM-T120,equivalent_stress,available,2.9189,MPa,
+SIM-T120,total_deformation,available,0.006009,mm,
+SIM-T160,equivalent_elastic_strain,available,0.00085723,1,
+SIM-T160,equivalent_stress,available,2.8536,MPa,
+SIM-T160,total_deformation,available,0.0055584,mm,
+SIM-T085,directional_deformation,MISSING,,mm,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/0.85mm/Directional_deformation.png)
+SIM-T085,strain_energy,MISSING,,mJ,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/0.85mm/Strain Energy.png)
+SIM-T085,volume,MISSING,,mm^3,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/0.85mm/Volume.png)
+SIM-T120,directional_deformation,MISSING,,mm,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/1.2mm/Directional_Deformation.png)
+SIM-T120,strain_energy,MISSING,,mJ,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/1.2mm/Strain_energy.png)
+SIM-T120,volume,MISSING,,mm^3,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/1.2mm/Volume.png)
+SIM-T160,directional_deformation,MISSING,,mm,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/1.6mm/Directional_deformation.png)
+SIM-T160,strain_energy,MISSING,,mJ,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/1.6mm/Strain_Energy.png)
+SIM-T160,volume,MISSING,,mm^3,no machine-readable numeric value in the repository; it exists only in the binary result file (not parsed) and as a contour image (Simulation Images/1.6mm/Volume.png)
