@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" width="360" height="250" role="img" aria-labelledby="t d" font-family="Helvetica, Arial, sans-serif" font-size="11">
+<title id="t">Specific stiffness proxy</title><desc id="d">DERIVED: F/(deformation x mass), equal load, indicative. Values: 0.85 mm = 3475.5 N/mm/g; 1.2 mm = 3569.6 N/mm/g; 1.6 mm = 3394.6 N/mm/g</desc>
+<rect width="360" height="250" fill="#ffffff"/>
+<text x="70" y="20" font-size="13" font-weight="bold" fill="#1a1a1a">Specific stiffness proxy</text>
+<text x="70" y="36" fill="#555555">DERIVED: F/(deformation x mass), equal load, indicative</text>
+<line x1="70" x2="344" y1="206.0" y2="206.0" stroke="#dddddd"/><text x="64" y="210.0" text-anchor="end" fill="#444444">0</text>
+<line x1="70" x2="344" y1="168.5" y2="168.5" stroke="#dddddd"/><text x="64" y="172.5" text-anchor="end" fill="#444444">1,000</text>
+<line x1="70" x2="344" y1="131.0" y2="131.0" stroke="#dddddd"/><text x="64" y="135.0" text-anchor="end" fill="#444444">2,000</text>
+<line x1="70" x2="344" y1="93.5" y2="93.5" stroke="#dddddd"/><text x="64" y="97.5" text-anchor="end" fill="#444444">3,000</text>
+<line x1="70" x2="344" y1="56.0" y2="56.0" stroke="#dddddd"/><text x="64" y="60.0" text-anchor="end" fill="#444444">4,000</text>
+<rect x="88.3" y="75.7" width="54.8" height="130.3" fill="#c26a14"/><text x="115.7" y="70.7" text-anchor="middle" fill="#1a1a1a">3475.5</text><text x="115.7" y="222" text-anchor="middle" fill="#444444">0.85 mm</text>
+<rect x="179.6" y="72.1" width="54.8" height="133.9" fill="#c26a14"/><text x="207.0" y="67.1" text-anchor="middle" fill="#1a1a1a">3569.6</text><text x="207.0" y="222" text-anchor="middle" fill="#444444">1.2 mm</text>
+<rect x="270.9" y="78.7" width="54.8" height="127.3" fill="#c26a14"/><text x="298.3" y="73.7" text-anchor="middle" fill="#1a1a1a">3394.6</text><text x="298.3" y="222" text-anchor="middle" fill="#444444">1.6 mm</text>
+<text x="207" y="244" text-anchor="middle" fill="#444444">face-sheet thickness; axis unit: N/mm/g</text></svg>
