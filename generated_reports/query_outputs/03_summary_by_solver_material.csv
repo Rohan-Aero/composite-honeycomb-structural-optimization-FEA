@@ -1,0 +1,2 @@
+solver,analysis_type,core_material,face_sheet_material,cases,configurations,metrics_available,metrics_missing,min_deformation_mm,max_deformation_mm,min_stress_mpa,max_stress_mpa
+ANSYS MAPDL 2025 R1,STATIC (STEADY-STATE),PLA,ePA-CF,3,3,24,9,0.0055584,0.0070107,2.8536,2.9896
