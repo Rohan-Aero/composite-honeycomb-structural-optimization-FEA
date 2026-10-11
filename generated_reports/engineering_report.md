@@ -143,12 +143,12 @@ Every value links to its source file, archive member, line/table locator and SHA
 
 | item | value | unit | origin | source file | locator | sha256 |
 |---|---|---|---|---|---|---|
-| equivalent_elastic_strain [assembly] | 0.000896 | 1 | documented | README.md | README.md line 58: row "0.85 mm", column "Elastic Strain" = "0.000896" | 7e48dfc02723 |
+| equivalent_elastic_strain [assembly] | 0.000896 | 1 | documented | README.md | README.md line 58: row "0.85 mm", column "Elastic Strain" = "0.000896" | 56a573b66abc |
 | equivalent_elastic_strain [assembly] | 0.00089581 | 1 | documented | MAJOR PROJECT REPORT (1).pdf | report p.61 Table 6 row 0.85 (transcribed in data/report_values.csv line 3) | 3a80aae3a369 |
-| equivalent_stress [assembly] | 2.9896 | MPa | documented | README.md | README.md line 58: row "0.85 mm", column "Von Mises Stress (MPa)" = "2.9896" | 7e48dfc02723 |
+| equivalent_stress [assembly] | 2.9896 | MPa | documented | README.md | README.md line 58: row "0.85 mm", column "Von Mises Stress (MPa)" = "2.9896" | 56a573b66abc |
 | equivalent_stress [assembly] | 2.9896 | MPa | documented | MAJOR PROJECT REPORT (1).pdf | report p.61 Table 6 row 0.85 (transcribed in data/report_values.csv line 4) | 3a80aae3a369 |
 | max_displacement_component [assembly] | -0.0068005 | mm | solver_file | WORKBENCH N MECH.wbpz :: file.mntr | line 11 | a246ea634d37 |
-| total_deformation [assembly] | 0.00701 | mm | documented | README.md | README.md line 58: row "0.85 mm", column "Deformation (mm)" = "0.00701" | 7e48dfc02723 |
+| total_deformation [assembly] | 0.00701 | mm | documented | README.md | README.md line 58: row "0.85 mm", column "Deformation (mm)" = "0.00701" | 56a573b66abc |
 | total_deformation [assembly] | 0.0070107 | mm | documented | MAJOR PROJECT REPORT (1).pdf | report p.61 Table 6 row 0.85 (transcribed in data/report_values.csv line 2) | 3a80aae3a369 |
 | total_mass [assembly] | 41.041 | g | solver_file | WORKBENCH N MECH.wbpz :: solve.out | line 493 | ed9a991bc759 |
 

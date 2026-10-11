@@ -241,5 +241,6 @@ sql/                 11 documented SQL queries
 data/                report_values.csv (transcribed from the PDF), demo_bom.csv (demonstration)
 tests/               78 unittest tests (database, import, checks with injected errors, workflow, queries, reports)
 docs/                AUDIT_AND_PLAN.md (Phase 1 audit), schema.md
+                     report_appendix/: Appendix A (6 pages, project-report style) and a copy of the report with it appended
 generated_reports/   sample output of `python -m plm all` (committed; the database itself is not)
 ```
