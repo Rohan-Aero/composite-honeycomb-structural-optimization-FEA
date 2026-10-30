@@ -98,7 +98,7 @@ The tool's README has the full command reference. Run it from a checkout of its 
 export PLM_SOURCE_ROOT=/path/to/composite-honeycomb-structural-optimization-FEA
 cd /path/to/composite-honeycomb-plm
 python -m plm all                    # init (rebuild) -> import -> demo -> validate -> report
-python -m unittest discover -v       # tests; six currently fail on this data
+python -m unittest discover -v       # 80 tests, all pass on this data
 ```
 
 Two things to know before running it on this repository:
@@ -156,7 +156,7 @@ the derived specific stiffness F/(deformation x mass)**. Full reports: [`enginee
 
 `python -m plm validate` runs 42 check codes (missing values, duplicate IDs, wrong types, units, invalid parameters, broken links,
 comparability, cross-source consistency, BOM/ECR integrity, source-file hashes) and classifies findings as **error**, **warning** or **info**,
-each with the affected record and a suggested correction. Source data is never modified. On the real data there are **3 errors, 11 warnings, 14 info**. The three errors compare the README's deformation values with the report's and are open (see the tool repository's Known issues). The warnings are:
+each with the affected record and a suggested correction. Source data is never modified. On the real data there are **0 errors, 11 warnings, 14 info**. The warnings are:
 
 | Finding (warning) | Detail |
 |---|---|
