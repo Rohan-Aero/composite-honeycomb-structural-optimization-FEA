@@ -103,7 +103,7 @@ python -m unittest discover -v       # tests; six currently fail on this data
 
 Two things to know before running it on this repository:
 
-- `python -m plm import` is currently **rejected**: `Report/` holds three PDFs and the importer expects exactly one. See the tool repository's Known issues.
+- `python -m plm import` reads the report that `data/report_values.csv` cites, `Report/MAJOR PROJECT REPORT (1).pdf`. The two Appendix A PDFs in `Report/` are kept and registered as source files.
 - `report` writes to `generated_reports/` here by default, which overwrites the committed samples. Pass `--out` to keep them.
 
 ## What is imported, and from where
