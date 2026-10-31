@@ -80,9 +80,9 @@ Only face sheet thickness varies:
 
 # Extension: PLM-inspired engineering data management
 
-A small engineering-data system built **around** the FEA study above (nothing above this line, and none of the CAD, ANSYS, image or report
-files, was changed). It loads the study into a relational SQLite database, keeps every value traceable to its source file, checks the data
-quality, and answers questions about the three face-sheet configurations with documented SQL.
+The engineering-data tool that loads this study into a relational SQLite database (the `plm`, `sql` and `tests` folders) now lives in its own repository: **[composite-honeycomb-plm](https://github.com/Rohan-Aero/composite-honeycomb-plm)**. It keeps every value traceable to its source file, checks the data quality, and answers questions about the three face-sheet configurations with documented SQL. It reads the study files in this repository and never modifies them.
+
+This repository keeps the data the tool reads (ANSYS files, README, `Report/`, `data/`), the generated sample reports and the documentation.
 
 > **What is real and what is not.** Simulation inputs, solver outputs and the documented results come from the repository files.
 > The BOM, part numbers (`DEMO-...`), design revisions and the engineering change request are a **demonstration** workflow created by
@@ -92,28 +92,19 @@ quality, and answers questions about the three face-sheet configurations with do
 
 ## Quick start
 
-Requirements: Python 3.9+ with its standard library only (SQLite 3.25+ for window functions; every current Python bundles it).
-Optional: `pdftotext` (poppler) enables a check that each transcribed report value really appears on the cited PDF page.
-No other dependency, no absolute paths: everything is resolved relative to the repository.
+The tool's README has the full command reference. Run it from a checkout of its repository and point `PLM_SOURCE_ROOT` at this repository:
 
 ```bash
+export PLM_SOURCE_ROOT=/path/to/composite-honeycomb-structural-optimization-FEA
+cd /path/to/composite-honeycomb-plm
 python -m plm all                    # init (rebuild) -> import -> demo -> validate -> report
-python -m unittest discover -v       # 78 automated tests
+python -m unittest discover -v       # 80 tests, all pass on this data
 ```
 
-or step by step (`--db FILE` and `--root DIR` are accepted by every command):
+Two things to know before running it on this repository:
 
-```bash
-python -m plm init [--force]         # create build/honeycomb_plm.sqlite from plm/schema.sql
-python -m plm import                 # ANSYS archives + README + report values -> database (sources are read-only)
-python -m plm demo                   # DEMONSTRATION BOM, revisions A/B, change request DEMO-ECR-0001
-python -m plm validate               # data-quality checks; exit status 1 if any *error*
-python -m plm report [--out DIR]     # generated_reports/: Markdown, CSV, SVG charts
-python -m plm query sql/01_compare_thickness_configs.sql    # run any SQL file and print the table
-```
-
-`init` never overwrites an existing database without `--force` (the database is a derived artifact and is git-ignored). `import` refuses
-to run twice and rejects a malformed input file as a whole instead of repairing it.
+- `python -m plm import` reads the report that `data/report_values.csv` cites, `Report/MAJOR PROJECT REPORT (1).pdf`. The two Appendix A PDFs in `Report/` are kept and registered as source files.
+- `report` writes to `generated_reports/` here by default, which overwrites the committed samples. Pass `--out` to keep them.
 
 ## What is imported, and from where
 
@@ -146,7 +137,7 @@ quantity_def (canonical units)   artifact_link (file roles)   validation_run -> 
 
 ## Results from the available data
 
-Source values (documented ANSYS results) with derived percent changes versus 0.85 mm (query `sql/01_compare_thickness_configs.sql`):
+Source values (documented ANSYS results) with derived percent changes versus 0.85 mm (query `sql/01_compare_thickness_configs.sql` in the tool repository):
 
 | Config | Thickness (mm) | Deformation (mm) | Stress (MPa) | Strain | Deformation vs 0.85 mm | Stress vs 0.85 mm |
 |---|---|---|---|---|---|---|
@@ -157,7 +148,7 @@ Source values (documented ANSYS results) with derived percent changes versus 0.8
 ![Maximum total deformation](generated_reports/charts/total_deformation_by_thickness.svg)
 ![Derived specific stiffness](generated_reports/charts/specific_stiffness_by_thickness.svg)
 
-Ranking (`sql/02_rank_configurations.sql`): 1.6 mm is best for deformation, stress and strain; 0.85 mm is the lightest; **1.2 mm is best for
+Ranking (`sql/02_rank_configurations.sql` in the tool repository): 1.6 mm is best for deformation, stress and strain; 0.85 mm is the lightest; **1.2 mm is best for
 the derived specific stiffness F/(deformation x mass)**. Full reports: [`engineering_report.md`](generated_reports/engineering_report.md),
 [`data_quality_report.md`](generated_reports/data_quality_report.md) (also CSV), and every query output in `generated_reports/query_outputs/`.
 
@@ -165,7 +156,7 @@ the derived specific stiffness F/(deformation x mass)**. Full reports: [`enginee
 
 `python -m plm validate` runs 42 check codes (missing values, duplicate IDs, wrong types, units, invalid parameters, broken links,
 comparability, cross-source consistency, BOM/ECR integrity, source-file hashes) and classifies findings as **error**, **warning** or **info**,
-each with the affected record and a suggested correction. Source data is never modified. On the real data there are **0 errors, 11 warnings, 14 info**:
+each with the affected record and a suggested correction. Source data is never modified. On the real data there are **0 errors, 11 warnings, 14 info**. The warnings are:
 
 | Finding (warning) | Detail |
 |---|---|
@@ -183,7 +174,7 @@ mesh counts and material data match). The repository has no experimental data an
 
 ## Example SQL
 
-All queries are in [`sql/`](sql/), documented in their headers, and run on any SQLite client or with `python -m plm query <file>`.
+All queries are in the tool repository's [`sql/`](https://github.com/Rohan-Aero/composite-honeycomb-plm) folder, documented in their headers, and run on any SQLite client or with `python -m plm query <file>`.
 
 ```sql
 -- Documented total deformation per configuration, best first (v_result_primary: one value per case/metric,
@@ -210,7 +201,7 @@ JOIN v_result_primary b ON b.case_id = cb.case_id AND b.metric_name = a.metric_n
 JOIN configuration f ON f.config_id = ca.config_id;
 ```
 
-The comparison, ranking and revision queries (`sql/01`, `02`, `06`) use a pivot CTE and window functions (`RANK()`); open them for the full text.
+The comparison, ranking and revision queries (`sql/01`, `02`, `06` in the tool repository) use a pivot CTE and window functions (`RANK()`); open them for the full text.
 
 | File | Purpose |
 |---|---|
@@ -236,11 +227,10 @@ The comparison, ranking and revision queries (`sql/01`, `02`, `06`) use a pivot 
 ## Repository additions
 
 ```
-plm/                 schema.sql, db.py, ingest.py, checks.py, workflow.py, report.py, cli.py, units.py
-sql/                 11 documented SQL queries
 data/                report_values.csv (transcribed from the PDF), demo_bom.csv (demonstration)
-tests/               78 unittest tests (database, import, checks with injected errors, workflow, queries, reports)
 docs/                AUDIT_AND_PLAN.md (Phase 1 audit), schema.md
                      report_appendix/: Appendix A (6 pages, project-report style) and a copy of the report with it appended
 generated_reports/   sample output of `python -m plm all` (committed; the database itself is not)
 ```
+
+The `plm/`, `sql/` and `tests/` folders moved to [composite-honeycomb-plm](https://github.com/Rohan-Aero/composite-honeycomb-plm).
